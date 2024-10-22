@@ -1,0 +1,93 @@
+footer{ 
+    /* padding-top: 60px !important; */
+    background: #0B6FC7; 
+    color: #fff; 
+    text-align: center;
+    p{
+        color: #fff;
+    }
+    &.sectionPadding{
+        padding-bottom: 10px;
+    }
+    .companyname{
+        margin-bottom: 0;
+        font-size:20px; 
+        line-height: 30px; 
+        font-weight: 600; 
+        margin-bottom: 8px;
+    } 
+    .address{
+        font-size: 14px; 
+        line-height: 20px; 
+        font-weight: 500; 
+        margin-bottom: 8px;
+        @include phone{
+            font-size: 12px;
+        }
+        @include phone480{ 
+            max-width: 190px;
+            text-align: center;
+            margin: auto;
+        }
+    }
+    .location{ 
+        @include phone480{
+            margin: 10px 0;
+        }
+        a{
+            color: #fff; 
+            font-size: 14px; 
+            line-height: 20px;
+        }
+    }
+    ul{ 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin-top: 15px;
+
+        li{
+             list-style: none; 
+             margin: 0 15px;
+
+            a{
+                color: #fff; 
+                i{
+                    transition: 400ms;
+                }
+                &:hover{
+                    i{ 
+                        transform: scale(1.5); 
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        margin-top: 20px;
+        padding-top:10px; 
+        border-top: 1px solid #fff;
+        text-align: center;
+        /* width: 97%; */
+
+         @include phone{
+            flex-direction: column;
+         }
+        p{
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-bottom: 0; 
+            font-size: 12px; 
+            line-height: 20px;
+            @include phone480{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

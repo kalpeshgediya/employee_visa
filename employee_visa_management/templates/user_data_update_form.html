@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Update Particular User Data</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="particulars">Particulars</label>
+                <input type="text" name="particulars" class="form-control" value="{{ user_data.particulars }}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" value="{{ user_data.email }}">
+            </div>
+            <div class="form-group">
+                <label for="remarks">Remarks</label>
+                <textarea name="remarks" class="form-control">{{ user_data.remarks }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="citizen_ship">Citizenship</label>
+                <input type="text" name="citizen_ship" class="form-control" value="{{ user_data.citizen_ship }}">
+            </div>
+            <div class="form-group">
+                <label for="licence_no">License Number</label>
+                <input type="text" name="licence_no" class="form-control" value="{{ user_data.licence_no }}">
+            </div>
+            <div class="form-group">
+                <label for="expiry_date">Expiry Date</label>
+                <input type="datetime-local" name="expiry_date" class="form-control" value="{{ user_data.expiry_date|date:'Y-m-d H:i' }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a href="{% url 'user_list' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

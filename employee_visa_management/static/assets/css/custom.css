@@ -1,0 +1,158 @@
+body {
+    background-color: #F0F4F7;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.custom-label {
+    font-weight: bold;
+    color: #333333;
+}
+
+.custom-input {
+    border-radius: 8px;
+}
+
+.remarks-textarea {
+    min-height: 120px;
+    border-radius: 8px;
+}
+
+.button-group button {
+    margin-right: 10px;
+}
+
+.primary-button,
+.secondary-button {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #6c757d;
+    color: #ffffff;
+    border: none;
+}
+
+.selected {
+    background-color: #007bff !important;
+    color: #ffffff !important;
+}
+
+.custom-label.required:after {
+    content: " *";
+    color: red;
+}
+
+        .selected {
+            background-color: #007bff !important;
+            color: #ffffff !important;
+        }
+
+        .custom-label.required:after {
+            content: " *";
+            color: red;
+        }
+
+
+/* Add this to your custom CSS file */
+.custom-dropdown {
+    background-color: black;
+    color: rgb(205, 195, 195); /* Ensure the text color is readable */
+}
+
+/* Optional: Adjust the color of links inside the dropdown */
+.custom-dropdown .dropdown-item {
+    color: rgb(0, 0, 0); /* Ensure the link color is readable */
+}
+
+/* Optional: Adjust the hover color for links inside the dropdown */
+.custom-dropdown .dropdown-item:hover {
+    background-color: #333; /* Darker shade of black for hover */
+    color: white;
+}        
+
+
+
+.nav-link.dropdown-toggle::after {
+    color: rgb(255, 255, 255); /* Change the color to black */
+    font-weight: bold; /* Make it bold */
+    
+  }
+  
+  .nav-profile-name-container {
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .nav-profile-name {
+    display: block;
+  }
+  
+  .nav-profile-groups {
+    text-align: center;
+    display: block;
+    color: white; 
+  }
+
+
+  
+
+@media print {
+    .no-print {
+      display: none;
+    }
+    
+  }
+
+  .logo {
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed the parent container width */
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      width: 150px; /* Adjust the size for smaller screens if needed */
+    }
+  }
+
+
+  @media print {
+    .print-header {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .print-header img {
+        width: 100px;
+        height: auto;
+    }
+    .no-print {
+        display: none;
+    }
+}
+.print-header {
+    display: none;
+}
+
+
+
+
+  
+  

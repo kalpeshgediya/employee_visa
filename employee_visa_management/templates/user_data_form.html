@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User Data</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .form-control {
+            height: 38px;
+            width: 100%; /* Set width to 100% for responsive design */
+        }
+        textarea {
+            height: 80px;
+            width: 100%; /* Set width to 100% for responsive design */
+        }
+        .form-container {
+            max-width: 400px; /* Set a max width for the form */
+            margin: auto; /* Center the form container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center"> Add Particulars </h1>
+        <div class="form-container">
+            <form action="{% url 'submit_user_data' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="particulars">Particulars:</label>
+                    <input type="text" class="form-control form-control-sm" id="particulars" name="particulars" maxlength="500" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control form-control-sm" id="email" name="email" maxlength="254" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="remarks">Remarks:</label>
+                    <textarea class="form-control form-control-sm" id="remarks" name="remarks" maxlength="1000" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="citizen_ship">Citizenship:</label>
+                    <input type="text" class="form-control form-control-sm" id="citizen_ship" name="citizen_ship" maxlength="500" required>
+                </div>
+                <div class="form-group">
+                    <label for="licence_no">License Number:</label>
+                    <input type="text" class="form-control form-control-sm" id="licence_no" name="licence_no" maxlength="500" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry_date">Expiry Date:</label>
+                    <input type="datetime-local" class="form-control form-control-sm" id="expiry_date" name="expiry_date" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                <a href="{% url 'user_data_list' %}" class="btn btn-secondary btn-sm">Back to List</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
